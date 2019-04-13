@@ -1,5 +1,5 @@
 const axios = require('axios');
-const baseUrl = process.env.REACT_APP_BASE_URL || 'https://ecommerce-backend-project.herokuapp.com/'
+const baseUrl = process.env.REACT_APP_BASE_URL || 'https://ecommerce-backend-project.herokuapp.com'
 
 module.exports = {
 
