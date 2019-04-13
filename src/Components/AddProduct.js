@@ -5,22 +5,27 @@ import * as actionTypes from "../store/action";
 
 
 class AddProduct extends Component {
-  state = {
-    newProduct: {
-      name: "",
-      description: "",
-      priceAfter: "",
-      priceBefore: "",
-      onSale: true,
-      PaymentTypes: [],
-      categroies: [],
-      ProductImg: img
-    }
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      newProduct: {
+        name: "",
+        description: "",
+        priceAfter: "",
+        priceBefore: "",
+        onSale: true,
+        PaymentTypes: [],
+        categroies: [],
+        ProductImg: img
+      },
+    };
+    this.OnAddNewProduct = this.OnAddNewProduct.bind(this);
+  }
 
   changeHandlerName = (e) => {
     const newproduct = { ...this.state.newProduct };
     newproduct.name = e.target.value;
+    console.log(newproduct);
     this.setState({ newProduct: newproduct });
   }
 
@@ -64,6 +69,11 @@ class AddProduct extends Component {
     const newproduct = { ...this.state.newProduct };
     newproduct.categroies.push(e.target.name);
     this.setState({ newProduct: newproduct });
+  }
+
+  OnAddNewProduct = (e) => {
+    e.preventDefault();
+    this.props.OnAddProduct(this.state.newProduct);
   }
 
   render() {
@@ -327,7 +337,7 @@ class AddProduct extends Component {
                   <button href="#" className="btn btn--gray">
                     Cancel
                   </button>
-                  <button href="#" className="btn btn--primary" onClick={(e) => { e.preventDefault(); this.props.OnAddProduct(this.state.newProduct) }}>
+                  <button href="#" className="btn btn--primary" onClick={this.OnAddNewProduct}>
                     Add
                   </button>
                 </div>
@@ -342,7 +352,7 @@ class AddProduct extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    OnAddProduct: (productData) => dispatch({ type: actionTypes.ADDPRODUCT, productData: productData }),
+    OnAddProduct: (productData) => dispatch(actionTypes.addProduct(productData)),
   }
 }
 

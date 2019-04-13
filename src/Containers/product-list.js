@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import image from "../assets/img/products/product-grey-1.jpg";
 import Filter from "../Components/filter";
 import Product from "../Components/product";
 import Pagination from "../Components/pagination";
@@ -8,6 +7,7 @@ import * as actionTypes from "../store/action";
 
 class ProductList extends Component {
   state = {
+    pr: [],
     pageSize: 6,
     currentPage: 1
   };
@@ -19,6 +19,7 @@ class ProductList extends Component {
     let startindex = (pageNumber - 1) * pageSize;
     return items.slice(startindex, startindex + pageSize);
   }
+
 
   render() {
     this.allProducts = this.Paginate(

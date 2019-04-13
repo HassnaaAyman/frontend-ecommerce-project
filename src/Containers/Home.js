@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import SideNav from "./Sidenav";
-import ProductList from "./product-list";
+import SideNav from "../Containers/Sidenav";
+import ProductList from "../Containers/product-list";
+
 class Home extends Component {
   state = {};
   render() {

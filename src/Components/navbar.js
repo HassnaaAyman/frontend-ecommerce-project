@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="dropdown__body">
               <ul className=" list">
                 <li className="list__item">
-                  <Link className="nav__inner-link" to="/">
+                  <Link className="nav__inner-link" to="/product-list">
                     Product Listing
                   </Link>
                 </li>

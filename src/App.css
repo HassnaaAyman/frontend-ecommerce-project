@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:100,400,700");
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
 @keyframes shake {
   from {
     transform: translateX(0); }
   to {
     transform: translateX(0.3rem); } }
 
+    .App {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    
 .container {
   width: 114rem;
   margin: 0 auto;
@@ -1238,3 +1245,5 @@ strong {
     background-position: -224px -165px; }
   .flag.flag-zw {
     background-position: -240px -165px; }
+
+   
