@@ -8,12 +8,5 @@ module.exports = {
     },
     login(credentials) {
         return axios.post(`${baseUrl}/users/login`, credentials)
-    },
-    getUserProducts() {
-        return axios.get(`${baseUrl}/users/product-list`, {
-            headers: {
-                Authorization: localStorage.getItem("token")
-            }
-        })
     }
 }
