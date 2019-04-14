@@ -193,7 +193,7 @@ class AddProduct extends Component {
                           name="discount"
                           id=""
                           value="isNotOnSale"
-                          onChange={this.changeHandlerNotOnSale}
+                          onChange={this.changeHandlerSale}
                         />
                         <span>Not On Sale</span>
                       </div>
