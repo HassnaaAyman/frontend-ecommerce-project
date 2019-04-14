@@ -28,16 +28,15 @@ class UserForm extends Component {
                 <header className="App-header">
                     <h2> Register Form </h2>
                     <form onSubmit={this.registerHandler} >
-                        <input type="text" name="username" />
-                        <input type="email" name="email" />
-                        <input type="password" name="password" />
+                        <input type="text" name="username" placeholder="Username" />
+                        <input type="password" name="password" placeholder="Password" />
                         <button type="submit" >Register </button>
                     </form>
 
                     <h2> Login Form </h2>
                     <form onSubmit={this.loginHandler} >
-                        <input type="text" name="username" />
-                        <input type="password" name="password" />
+                        <input type="text" name="username" placeholder="Username" />
+                        <input type="password" name="password" placeholder="Password" />
                         <button type="submit" >login</button>
                     </form>
                 </header>

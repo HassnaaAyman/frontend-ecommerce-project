@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actionTypes from "../store/action";
 
-
 class AddProduct extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +14,8 @@ class AddProduct extends Component {
         onSale: true,
         PaymentTypes: [],
         categroies: [],
-        ProductImg: ""  //w hena kaman sora
+        ProductImg: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiCvN_h6s_hAhUj8uAKHb6cCbMQjRx6BAgBEAU&url=https%3A%2F%2Fpcbonlineshop.com%2FTest-product-2.html&psig=AOvVaw0isQyhnlzUCUlhsw04sQFl&ust=1555339886468743'
+
       },
     };
     this.OnAddNewProduct = this.OnAddNewProduct.bind(this);
@@ -47,15 +47,18 @@ class AddProduct extends Component {
   }
 
   changeHandlerSale = (e) => {
-    const newproduct = { ...this.state.newProduct };
-    newproduct.onSale = e.target.value;
-    this.setState({ newProduct: newproduct });
-  }
-
-  changeHandlerNotOnSale = (e) => {
-    const newproduct = { ...this.state.newProduct };
-    newproduct.onSale = e.target.value;
-    this.setState({ newProduct: newproduct });
+    if (e.target.value === "OnSale") {
+      this.setState({
+        ...this.state,
+        OnSale: true
+      })
+    }
+    else {
+      this.setState({
+        ...this.state,
+        OnSale: false
+      })
+    }
   }
 
   onCheckHandler = (e) => {
@@ -349,7 +352,7 @@ class AddProduct extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    OnAddProduct: (productData) => dispatch(actionTypes.addProduct(productData)),
+    OnAddProduct: (productData) => dispatch(actionTypes.addProductToList(productData)),
   }
 }
 
