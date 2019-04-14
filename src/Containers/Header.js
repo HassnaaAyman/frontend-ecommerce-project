@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "../assets/img/logo.png";
 import Navbar from "../Components/navbar";
 import cart from "../assets/img/icons/icon-cart-big.svg";
 import PersonalImage from "../assets/img/PersonalImage.png";
@@ -88,9 +87,7 @@ class Header extends Component {
         </div>
 
         <div className="header__middle container">
-          <a href="/" className="header__logo-box">
-            <img className="header__logo" src={logo} alt="" />
-          </a>
+
 
           <div className="header__user-options">
             <div className="dropdown">
