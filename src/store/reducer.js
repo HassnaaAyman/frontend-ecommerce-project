@@ -7,6 +7,15 @@ const intiateState = {
 
 const reducer = (state = intiateState, action) => {
   switch (action.type) {
+    case actionTypes.GETALLPRODUCTS:
+      let newProduct = [...state.products];
+      newProduct.push(action.payload);
+      return {
+        ...state,
+        products: newProduct
+      }
+
+
     case actionTypes.ADDPRODUCT:
       let newProducts = [...state.products];
       console.log(newProducts)

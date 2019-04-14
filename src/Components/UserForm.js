@@ -8,7 +8,7 @@ class UserForm extends Component {
         e.preventDefault();
         const { username: { value: username }, password: { value: password } } = e.target.elements;
         const res = login({ username, password }).then(res => {
-            console.log(res.data.user._id);
+            // console.log(res.data.user._id);
             this.props.history.push('./product-list');
         });
         alert('you are authenticated');

@@ -10,7 +10,13 @@ class ProductList extends Component {
     pr: [],
     pageSize: 6,
     currentPage: 1
-  };
+  }
+
+  componentDidMount() {
+    this.props.onGetAllProducts();
+  }
+
+
   pageChangedHandler = page => {
     this.setState({ currentPage: page });
   };
@@ -19,8 +25,6 @@ class ProductList extends Component {
     let startindex = (pageNumber - 1) * pageSize;
     return items.slice(startindex, startindex + pageSize);
   }
-
-
   render() {
     this.allProducts = this.Paginate(
       this.props.pr,
@@ -29,13 +33,7 @@ class ProductList extends Component {
     );
     const products = this.allProducts.map((product, index) => (
       <Product
-        key={index}
-        id={product.id}
-        name={product.name}
-        priceBefore={product.priceBefore}
-        priceAfter={product.priceAfter}
-        ProductImg={product.ProductImg}
-        onSale={product.onSale}
+        prdt={product}
         deletedProduct={() => this.props.OnDeleteProduct(index)}
       // showdetails={() => this.props.onClickProduct(index)}
       />
@@ -51,7 +49,6 @@ class ProductList extends Component {
           itemsCount={this.props.pr.length}
           pageSize={this.state.pageSize}
           currentPage={this.state.currentPage}
-
         />
       </section>
     );
@@ -68,7 +65,7 @@ const mapDispatchToProps = dispatch => {
   return {
     OnDeleteProduct: id =>
       dispatch({ type: actionTypes.DELETEPRODUCT, productData: { id: id } }),
-
+    onGetAllProducts: () => dispatch(actionTypes.getProducts())
   };
 };
 

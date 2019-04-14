@@ -352,7 +352,7 @@ class AddProduct extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    OnAddProduct: (productData) => dispatch(actionTypes.addProductToList(productData)),
+    OnAddProduct: (productData) => dispatch(actionTypes.addProduct(productData)),
   }
 }
 
