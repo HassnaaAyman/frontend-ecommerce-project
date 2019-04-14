@@ -11,7 +11,7 @@ class ProductCockpit extends Component {
   state = {
     productdtails: {
       name: "",
-      ProductImg: "",  //7oty sora hena
+      ProductImg: "https://thumbs.mic.com/NGE1MGNjNWY0ZSMvaXk2UHBxOU44Q1RkRVRVemRfdExDdVRaUFpBPS8xNXgwOjEwMzB4NTcxLzgwMHg0NTAvZmlsdGVyczpmb3JtYXQoanBlZyk6cXVhbGl0eSg4MCkvaHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL3BvbGljeW1pYy1pbWFnZXMvaW4za2diOXZwdWtncXdudHlldWZwZDB3eTkyc290bjF1cXVrNG9nMm9ud3V2dTlpbGJkcTlnZXR1YXR5aXIwaC5qcGc.jpg",
       price: ""
     }
   }

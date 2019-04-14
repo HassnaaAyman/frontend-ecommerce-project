@@ -14,7 +14,7 @@ class AddProduct extends Component {
         onSale: false,
         PaymentTypes: [],
         categroies: [],
-        ProductImg: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiCvN_h6s_hAhUj8uAKHb6cCbMQjRx6BAgBEAU&url=https%3A%2F%2Fpcbonlineshop.com%2FTest-product-2.html&psig=AOvVaw0isQyhnlzUCUlhsw04sQFl&ust=1555339886468743'
+        ProductImg: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fpcbonlineshop.com%2Fphotos%2Fproduct%2F4%2F176%2F4.jpg&imgrefurl=https%3A%2F%2Fpcbonlineshop.com%2FTest-product-2.html&docid=hoD76SE7hB_ZTM&tbnid=Ys6s1aKrzB6hrM%3A&vet=10ahUKEwjTup6XldDhAhUixoUKHSY3Dc8QMwhtKAUwBQ..i&w=1192&h=1192&bih=625&biw=1366&q=product%20image&ved=0ahUKEwjTup6XldDhAhUixoUKHSY3Dc8QMwhtKAUwBQ&iact=mrc&uact=8'
 
       },
     };
