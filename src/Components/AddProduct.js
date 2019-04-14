@@ -182,7 +182,7 @@ class AddProduct extends Component {
                           type="radio"
                           name="discount"
                           id=""
-                          value="isOnSale"
+                          value="OnSale"
                           onChange={this.changeHandlerSale}
                         />
                         <span>On Sale</span>
@@ -192,7 +192,7 @@ class AddProduct extends Component {
                           type="radio"
                           name="discount"
                           id=""
-                          value="isNotOnSale"
+                          value="NotOnSale"
                           onChange={this.changeHandlerSale}
                         />
                         <span>Not On Sale</span>

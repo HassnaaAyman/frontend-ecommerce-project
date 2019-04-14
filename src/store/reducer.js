@@ -9,7 +9,7 @@ const reducer = (state = intiateState, action) => {
   switch (action.type) {
     case actionTypes.GETALLPRODUCTS:
       let newProduct = [...state.products];
-      newProduct.push(action.payload);
+      newProduct = action.payload;
       return {
         ...state,
         products: newProduct
