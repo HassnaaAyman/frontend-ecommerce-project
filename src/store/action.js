@@ -6,24 +6,20 @@ export const DELETEPRODUCT = "DELETEPRODUCT";
 export const SHOWPRODUCTDETAILS = "SHOWPRODUCTDETAILS";
 
 
-export const getprds = (product) => {
-    return { type: GETALLPRODUCTS, payload: product }
+
+export const getProducts = () => {
+    return dispatch => {
+        productsApi.getAllProducts().then(res => {
+            dispatch({ type: GETALLPRODUCTS, payload: res.data });
+        })
+            .catch(console.log);
+    }
 }
 
 
 export const addPrdt = (product) => {
     return { type: ADDPRODUCT, payload: product }
 }
-
-
-export const getProducts = ()=>{
-    return dispatch => {
-        productsApi.getAllProducts()
-            .then(res => dispatch(getprds(res.data)))
-            .catch(console.error);
-    }
-}
-
 
 
 export const addProduct = (product, token) => {
