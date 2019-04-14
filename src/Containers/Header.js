@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Navbar from "../Components/navbar";
-import cart from "../assets/img/icons/icon-cart-big.svg";
 class Header extends Component {
   render() {
     return (
@@ -99,9 +98,7 @@ class Header extends Component {
               <div className="dropdown__header">
                 <div
                   className="image image--small"
-                  style={{
-                    backgroundImage: `url(${cart})`
-                  }}
+
                 >
                   <div className="notification notification--danger">1</div>
                 </div>
