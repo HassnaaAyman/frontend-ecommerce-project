@@ -25,6 +25,8 @@ class ProductList extends Component {
     let startindex = (pageNumber - 1) * pageSize;
     return items.slice(startindex, startindex + pageSize);
   }
+
+
   render() {
     this.allProducts = this.Paginate(
       this.props.pr,
@@ -33,7 +35,12 @@ class ProductList extends Component {
     );
     const products = this.allProducts.map((product, index) => (
       <Product
-        prdt={product}
+        key={index}
+        name={product.name}
+        priceBefore={product.priceBefore}
+        priceAfter={product.priceAfter}
+        ProductImg={product.ProductImg}
+        onSale={product.onSale}
         deletedProduct={() => this.props.OnDeleteProduct(index)}
       // showdetails={() => this.props.onClickProduct(index)}
       />
