@@ -16,8 +16,8 @@ class UserForm extends Component {
 
     registerHandler = async (e) => {
         e.preventDefault();
-        const { username: { value: username }, password: { value: password }, email: { value: email } } = e.target.elements;
-        const res = await register({ username, password, email });
+        const { username: { value: username }, password: { value: password } } = e.target.elements;
+        const res = await register({ username, password });
         alert('you are registerd');
     }
 
