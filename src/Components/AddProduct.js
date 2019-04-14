@@ -11,7 +11,7 @@ class AddProduct extends Component {
         description: "",
         priceAfter: "",
         priceBefore: "",
-        onSale: true,
+        onSale: false,
         PaymentTypes: [],
         categroies: [],
         ProductImg: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiCvN_h6s_hAhUj8uAKHb6cCbMQjRx6BAgBEAU&url=https%3A%2F%2Fpcbonlineshop.com%2FTest-product-2.html&psig=AOvVaw0isQyhnlzUCUlhsw04sQFl&ust=1555339886468743'
