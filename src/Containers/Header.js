@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../Components/navbar";
 import cart from "../assets/img/icons/icon-cart-big.svg";
-import PersonalImage from "../assets/img/PersonalImage.png";
 class Header extends Component {
   render() {
     return (
@@ -92,10 +91,6 @@ class Header extends Component {
           <div className="header__user-options">
             <div className="dropdown">
               <div className="dropdown__header">
-                <div
-                  className="image image--small image--circle"
-                  style={{ backgroundImage: `url(${PersonalImage})` }}
-                />
               </div>
               <div className="dropdown__body" />
             </div>
