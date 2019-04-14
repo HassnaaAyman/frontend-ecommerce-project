@@ -7,5 +7,9 @@ module.exports = {
     },
     addProduct(product, token) {
         return axios.post(`${baseUrl}/products`, product, { headers: { Authorization: localStorage.getItem(token) } })
+    },
+    deleteProduct(id, token) {
+        return axios.delete(`${baseUrl}/products/${id}`, { headers: { Authorization: token } });
+
     }
 }

@@ -29,3 +29,18 @@ export const addProduct = (product, token) => {
             .catch(console.error);
     }
 }
+
+
+
+export const deletePrdt = (id) => {
+    return { type: DELETEPRODUCT, payload: id }
+}
+
+export const deleteProduct = (id, token) => {
+    return dispatch => {
+        productsApi.deleteProduct(id, token)
+            .then(res => dispatch(deletePrdt(id)))
+            .catch(console.error);
+
+    }
+}

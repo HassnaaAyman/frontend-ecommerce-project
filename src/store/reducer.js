@@ -28,7 +28,7 @@ const reducer = (state = intiateState, action) => {
 
     case actionTypes.DELETEPRODUCT:
       let deletedProduct = [...state.products]
-      let productId = deletedProduct.findIndex(product => product.id !== action.productData.id);
+      let productId = deletedProduct.findIndex(product => product.id !== action.payload);
       deletedProduct.splice(productId, 1)
       console.log(deletedProduct)
       return {

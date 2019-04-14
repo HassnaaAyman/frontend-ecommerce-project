@@ -70,8 +70,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    OnDeleteProduct: id =>
-      dispatch({ type: actionTypes.DELETEPRODUCT, productData: { id: id } }),
+    OnDeleteProduct: (id, token) => { dispatch(actionTypes.deleteProduct(id, token)) },
     onGetAllProducts: () => dispatch(actionTypes.getProducts())
   };
 };

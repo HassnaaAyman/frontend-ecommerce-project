@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import * as actionTypes from "../store/action";
+
 
 const Product = (props) => {
+
   return (
     <div className="item-medium-1">
       {props.onSale ? <div className="item-medium-1__alert"> Sale</div> : null}
@@ -39,5 +43,8 @@ const Product = (props) => {
     </div>
   );
 }
+
+
+
 
 export default Product;
