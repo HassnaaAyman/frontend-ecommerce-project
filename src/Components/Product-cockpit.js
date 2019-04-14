@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import img from "../assets/img/products/product-grey-7.jpg";
 import { connect } from "react-redux";
 import * as actionTypes from '../store/action'
 
@@ -12,7 +11,7 @@ class ProductCockpit extends Component {
   state = {
     productdtails: {
       name: "",
-      ProductImg: img,
+      ProductImg: "",  //7oty sora hena
       price: ""
     }
   }

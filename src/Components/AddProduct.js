@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import img from "../assets/img/products/product-grey-7.jpg";
 import { connect } from "react-redux";
 import * as actionTypes from "../store/action";
 
@@ -16,7 +15,7 @@ class AddProduct extends Component {
         onSale: true,
         PaymentTypes: [],
         categroies: [],
-        ProductImg: img
+        ProductImg: ""  //w hena kaman sora
       },
     };
     this.OnAddNewProduct = this.OnAddNewProduct.bind(this);
@@ -98,9 +97,7 @@ class AddProduct extends Component {
               <div className="slider__items">
                 <div
                   className="slider__item active"
-                  style={{
-                    backgroundImage: `url(${img})`
-                  }}
+
                 />
               </div>
               <div className="form-controls">
